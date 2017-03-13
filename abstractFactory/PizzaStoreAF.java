@@ -1,7 +1,7 @@
 package ds.abstractFactory;
 
 
-class PizzaStoryAF {
+class PizzaStoreAF {
 
   public interface PizzaIngredientFactory {
 
