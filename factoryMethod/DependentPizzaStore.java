@@ -1,4 +1,4 @@
-package ds.factoryMethod;
+package software_design.factoryMethod;
 
 public class DependentPizzaStore {
 
