@@ -1,4 +1,4 @@
-package proxy;
+package software_design.proxy;
 
  /**
   * Classe que implementa o conceito de Proxy Virtual no carregamento de imagens 
