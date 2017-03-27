@@ -4,8 +4,6 @@ package software_design.adapter.tabajara;
  * Implementação de imagem, 1997.
  */
 class Gif implements Imagem {
-   
-    Gif() {}
 
     @Deprecated
     @Override
