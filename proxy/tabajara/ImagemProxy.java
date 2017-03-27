@@ -27,11 +27,6 @@ class ImagemProxy implements Imagem {
     }
 
     @Override
-    public byte[][] content() throws IOException {
-        return this.imagem.content();
-    }
-
-    @Override
     public String toString() {
         return "largura:" + largura() + " altura:" + altura();
     }
