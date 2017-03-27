@@ -7,16 +7,6 @@ import java.io.IOException;
  */
 interface Imagem {
     /**
-     * @return Altura da imagem em pixels.
-     */
-    short altura();
-
-    /**
-     * @return Largura da imagem em pixels.
-     */
-    short largura();
-
-    /**
      * Desenha a imagem.
      */
     void draw() throws IOException;
