@@ -5,20 +5,6 @@ package software_design.proxy.tabajara;
  */
 class Gif implements Imagem {
    
-    Gif() {}
-
-    @Deprecated
-    @Override
-    public short altura() {
-        throw new RuntimeException("Nuuuunca seja chamado");
-    }
-
-    @Deprecated
-    @Override
-    public short largura() {
-        throw new RuntimeException("Nuuuunca seja chamado");
-    }
-
     @Override
     public void draw() throws IOException {
         System.out.println("Desenha imagem " + largura() + " x " + altura());
