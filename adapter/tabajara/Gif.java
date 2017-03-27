@@ -16,12 +16,10 @@ class Gif implements Imagem {
         this.cabecalho = cabecalho;
     }
 
-    @Override
     public short altura() {
         return this.cabecalho.altura();
     }
 
-    @Override
     public short largura() {
         return this.cabecalho.largura();
     }
