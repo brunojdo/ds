@@ -20,9 +20,4 @@ interface Imagem {
      * Desenha a imagem.
      */
     void draw() throws IOException;
-
-    /**
-     * @return o conteúdo do imagem, sem cabeçalho.
-     */
-    byte[][] content() throws IOException;
 }
