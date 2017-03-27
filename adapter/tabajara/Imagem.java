@@ -1,4 +1,4 @@
-package software_design.proxy.tabajara;
+package software_design.adapter.tabajara;
 
 import java.io.IOException;
 
