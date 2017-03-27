@@ -1,4 +1,4 @@
-package software_design.proxy.tabajara;
+package software_design.adapter.tabajara;
 
 /**
  * Implementação de imagem, 1997.
