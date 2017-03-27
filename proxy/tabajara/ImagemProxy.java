@@ -5,12 +5,10 @@ import java.io.IOException;
 class ImagemProxy implements Imagem {
     Cabecalho cabecalho;
     Imagem imagem;
-    Path path;
 
-    ImagemProxy(Imagem imagem, Path path, Cabecalho cabecalho) {
+    ImagemProxy(Imagem imagem, Cabecalho cabecalho) {
         this.imagem = imagem;
         this.cabecalho = cabecalho;
-        this.path = path;
     }
 
     @Override
@@ -21,10 +19,6 @@ class ImagemProxy implements Imagem {
     @Override
     public short largura() {
         return this.cabecalho.largura();
-    }
-
-    public String getTipo() {
-        return this.path.getTipo();
     }
 
     @Override
@@ -39,6 +33,6 @@ class ImagemProxy implements Imagem {
 
     @Override
     public String toString() {
-        return "Path: " + this.path.get() +" Tipo:" + getTipo() + " largura:" + largura() + " altura:" + altura();
+        return "largura:" + largura() + " altura:" + altura();
     }
 }
