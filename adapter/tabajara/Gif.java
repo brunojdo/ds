@@ -23,14 +23,7 @@ class Gif implements Imagem {
     public void draw() throws IOException {
         System.out.println("Desenha imagem " + largura() + " x " + altura());
     }
-
-    @Override
-    public byte[][] content() throws IOException {
-        return new byte[][]{
-            new byte[]{0, 1}
-        };
-    }
-
+   
     @Override
     public String toString() {
         return "largura:" + largura() + " altura:" + altura();
