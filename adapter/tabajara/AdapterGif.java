@@ -36,13 +36,6 @@ class AdapterGif implements Imagem {
     }
 
     @Override
-    public byte[][] content() throws IOException {
-        return new byte[][]{
-                new byte[]{0, 1}
-        };
-    }
-
-    @Override
     public String toString() {
         return "largura:" + largura() + " altura:" + altura();
     }
