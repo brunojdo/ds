@@ -11,7 +11,7 @@ class Gif implements Imagem {
     Cabecalho cabecalho;
     ImprovedGif ig;
 
-    AdapterGif(ImprovedGif ig, Cabecalho cabecalho) {
+    Gif(ImprovedGif ig, Cabecalho cabecalho) {
         this.ig = ig;
         this.cabecalho = cabecalho;
     }
