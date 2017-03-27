@@ -7,7 +7,7 @@ import java.io.IOException;
  * desenhar imagens Gif e o cabeçalho para responder informações sobre
  * a altura e a largura.
  */
-class AdapterGif implements Imagem {
+class Gif implements Imagem {
     Cabecalho cabecalho;
     ImprovedGif ig;
 
