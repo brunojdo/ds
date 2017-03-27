@@ -7,10 +7,7 @@ package software_design.adapter.tabajara;
  */
 class ImprovedGif {
     class TenteiENaoConseguiAbrirException extends Exception{}
-
-    ImprovedGif() {
-    }
-
+    
     public void draw() throws TenteiENaoConseguiAbrirException {
         System.out.println("Imagem adaptada usando ImprovedGif.");
     }
