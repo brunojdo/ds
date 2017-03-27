@@ -4,11 +4,8 @@ package software_design.proxy.tabajara;
  * Implementação de imagem, 1997.
  */
 class Gif implements Imagem {
-    String path;
-
-    Gif(String path) {
-        this.path = path;
-    }
+   
+    Gif() {}
 
     @Deprecated
     @Override
@@ -19,12 +16,6 @@ class Gif implements Imagem {
     @Deprecated
     @Override
     public short largura() {
-        throw new RuntimeException("Nuuuunca seja chamado");
-    }
-
-    @Deprecated
-    @Override
-    public String getTipo() {
         throw new RuntimeException("Nuuuunca seja chamado");
     }
 
@@ -42,6 +33,6 @@ class Gif implements Imagem {
 
     @Override
     public String toString() {
-        return "Path: " + this.path +" Tipo:" + getTipo() + " largura:" + largura() + " altura:" + altura();
+        return "largura:" + largura() + " altura:" + altura();
     }
 }
