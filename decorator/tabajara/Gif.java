@@ -1,4 +1,4 @@
-package software_design.adapter.tabajara;
+package software_design.decorator.tabajara;
 
 import java.io.IOException;
 
@@ -9,10 +9,8 @@ import java.io.IOException;
  */
 class Gif implements Imagem {
     Cabecalho cabecalho;
-    ImprovedGif ig;
 
-    Gif(ImprovedGif ig, Cabecalho cabecalho) {
-        this.ig = ig;
+    Gif(Cabecalho cabecalho) {
         this.cabecalho = cabecalho;
     }
 
@@ -26,15 +24,13 @@ class Gif implements Imagem {
 
     @Override
     public void draw() throws IOException {
-        try {
-            this.ig.draw();
-        } catch (ImprovedGif.TenteiENaoConseguiAbrirException e) {
-            throw new IOException(e);
-        }
+        System.out.println("Desenha imagem " + largura() + " x " + altura());
     }
-
+    
     @Override
-    public String toString() {
-        return "largura:" + largura() + " altura:" + altura();
+    public byte[][] content() throws IOException {
+        return new byte[][]{
+            new byte[]{0, 1}
+        };
     }
 }
