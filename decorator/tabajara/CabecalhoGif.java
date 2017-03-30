@@ -1,4 +1,4 @@
-package software_design.adapter.tabajara;
+package software_design.decorator.tabajara;
 
 class CabecalhoGif implements Cabecalho {
 
