@@ -11,18 +11,27 @@ import java.io.IOException;
  */
 class ImagemComFiltro implements Imagem {
     Imagem img;
-
-    ImagemComFiltro(Imagem img) {
+    Cabecalho cabecalho;
+    ImagemComFiltro(Imagem img, Cabecalho cabecalho) {
         this.img = img;
+        this.cabecalho = cabecalho;
     }
 
     @Override
     public void draw() throws IOException {
         byte[][] content = this.img.content();
         // aplica filtro ao conteúdo da imagem.
-        System.out.println("Desenha imagem com filtro " + this.img.largura() + " x " + this.img.altura());
+        System.out.println("Desenha imagem com filtro " + largura() + " x " + altura());
     }
     
+    public short altura() {
+        return this.cabecalho.altura();
+    }
+
+    public short largura() {
+        return this.cabecalho.largura();
+    }
+
     @Override
     public byte[][] content() throws IOException { 
       return this.img.content(); 
