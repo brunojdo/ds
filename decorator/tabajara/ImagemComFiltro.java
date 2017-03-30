@@ -11,10 +11,8 @@ import java.io.IOException;
  */
 class ImagemComFiltro implements Imagem {
     Imagem img;
-    Cabecalho cabecalho;
-    ImagemComFiltro(Imagem img, Cabecalho cabecalho) {
+    ImagemComFiltro(Imagem img) {
         this.img = img;
-        this.cabecalho = cabecalho;
     }
 
     @Override
@@ -25,11 +23,11 @@ class ImagemComFiltro implements Imagem {
     }
     
     public short altura() {
-        return this.cabecalho.altura();
+        return this.img.altura();
     }
 
     public short largura() {
-        return this.cabecalho.largura();
+        return this.img.largura();
     }
 
     @Override
