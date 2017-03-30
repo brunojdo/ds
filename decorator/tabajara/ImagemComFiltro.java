@@ -20,7 +20,7 @@ class ImagemComFiltro implements Imagem {
     public void draw() throws IOException {
         byte[][] content = this.img.content();
         // aplica filtro ao conteúdo da imagem.
-        System.out.println("Desenha imagem com filtro " + largura() + " x " + altura());
+        System.out.println("Desenha imagem com filtro " + this.img.largura() + " x " + this.img.altura());
     }
     
     @Override
