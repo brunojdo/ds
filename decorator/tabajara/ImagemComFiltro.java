@@ -17,9 +17,9 @@ class ImagemComFiltro implements Imagem {
 
     @Override
     public void draw() throws IOException {
-        byte[][] content = this.img.content();
-        // aplica filtro ao conteúdo da imagem.
         System.out.println("Desenha imagem com filtro " + largura() + " x " + altura());
+        // Draw this.content() internamente. Desenhando a imagem com o filtro aplicado.
+        this.img.draw();
     }
     
     public short altura() {
@@ -32,6 +32,8 @@ class ImagemComFiltro implements Imagem {
 
     @Override
     public byte[][] content() throws IOException { 
-      return this.img.content(); 
+      byte[][] conteudoComFiltro = new byte[altura()][largura()];
+      // Realiza operações de aplicação do filtro.
+      return conteudoComFiltro;
     }
 }
