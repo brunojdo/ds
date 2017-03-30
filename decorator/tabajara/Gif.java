@@ -8,12 +8,7 @@ import java.io.IOException;
  * a altura e a largura.
  */
 class Gif implements Imagem {
-    Cabecalho cabecalho;
-
-    Gif(Cabecalho cabecalho) {
-        this.cabecalho = cabecalho;
-    }
-
+ 
     @Override
     public short altura() {
         return 256;
