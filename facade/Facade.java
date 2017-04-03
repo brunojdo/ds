@@ -4,7 +4,7 @@ package software_design.facade;
  * Problema de acesso a vários subsistemas. 
  * Ref: https://brizeno.wordpress.com/category/padroes-de-projeto/facade/
  */
-class Problem {
+class Facade {
 
   public class SistemaDeAudio {
 
@@ -52,26 +52,52 @@ class Problem {
       System.out.println("Imagem: " + imagem + " renderizada");
     }
   }
-  
-  // Manipulação de vários subsistemas 
-  public static void main(String[] args) {
-      System.out.println("##### Configurando subsistemas #####");
-      SistemaDeAudio audio = new SistemaDeAudio();
-      audio.configurarCanais();
-      audio.configurarFrequencia();
-      audio.configurarVolume();
+  /**
+   * Fachada que o cliente deve se comunicar. Abstrai a necessidade do cliente 
+   * entender o funcionamento dos três subsistemas.
+   */
+  public class SistemasFacade {
+    protected SistemaDeAudio audio;
+    protected SistemaDeInput input;
+    protected SistemaDeVideo video;
 
-      SistemaDeInput input = new SistemaDeInput();
-      input.configurarTeclado();
-      input.configurarJoystick();
-
-      SistemaDeVideo video = new SistemaDeVideo();
+    public void inicializarSubsistemas() {
+      video = new SistemaDeVideo();
       video.configurarCores();
       video.configurarResolucao();
 
-      System.out.println("##### Utilizando subsistemas #####");
-      audio.reproduzirAudio("teste.mp3");
+      input = new SistemaDeInput();
+      input.configurarJoystick();
+      input.configurarTeclado();
+
+      audio = new SistemaDeAudio();
+      audio.configurarCanais();
+      audio.configurarFrequencia();
+      audio.configurarVolume();
+    }
+
+    public void reproduzirAudio(String arquivo) {
+      audio.reproduzirAudio(arquivo);
+    }
+
+    public void renderizarImagem(String imagem) {
+      video.renderizarImagem(imagem);
+    }
+
+    public void lerInput() {
       input.lerInput();
-      video.renderizarImagem("imagem.png");
+    }
+
+  }
+  // Manipulação através da fachada. 
+  public static void main(String[] args) {
+    System.out.println("##### Configurando subsistemas #####");
+		SistemasFacade fachada = new SistemasFacade();
+		fachada.inicializarSubsistemas();
+
+		System.out.println("##### Utilizando subsistemas #####");
+		fachada.renderizarImagem("imagem.png");
+		fachada.reproduzirAudio("teste.mp3");
+		fachada.lerInput();
   }
 }
