@@ -14,6 +14,7 @@ public class Funcionario {
 
 	public Funcionario(int cargo, double salarioBase) {
 		this.salarioBase = salarioBase;
+		this.nivel = nivel;
 		switch (cargo) {
 		case DESENVOLVEDOR:
 			estrategiaDeGratificacao = new GratificacaoDesenvolvedor();
