@@ -5,8 +5,7 @@ package software_design.strategy;
  */
 public class Funcionario {
 	public static final int DESENVOLVEDOR = 1;
-	public static final int GERENTE = 2;
-	public static final int DBA = 3;
+	public static final int DBA = 2;
 	protected double salarioBase;
 	protected int cargo;
         protected int nivel;
@@ -37,7 +36,7 @@ public class Funcionario {
 		return salarioBase;
 	}
   
-  public int getNivel() {
+  	public int getNivel() {
 		return nivel;
 	}
 }
