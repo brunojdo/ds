@@ -11,7 +11,7 @@ public class Funcionario {
         protected int nivel;
 	protected Gratificacao estrategiaDeGratificacao;
 
-	public Funcionario(int cargo, double salarioBase) {
+	public Funcionario(int cargo, double salarioBase, int nivel) {
 		this.salarioBase = salarioBase;
 		this.nivel = nivel;
 		switch (cargo) {
