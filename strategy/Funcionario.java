@@ -6,6 +6,7 @@ package software_design.strategy;
 public class Funcionario {
 	public static final int DESENVOLVEDOR = 1;
 	public static final int DBA = 2;
+	public static final int LIDER = 3;
 	protected double salarioBase;
 	protected int cargo;
         protected int nivel;
@@ -20,7 +21,11 @@ public class Funcionario {
 			cargo = DESENVOLVEDOR;
 			break;
 		case DBA:
-			estrategiaDeGratificacao = new GratificacaoDBA();
+			estrategiaDeGratificacao = new GratificacaoDesenvolvedor();
+			cargo = DBA;
+			break;
+		case LIDER:
+			estrategiaDeGratificacao = new GratificacaoLider();
 			cargo = DBA;
 			break;
 		default:
