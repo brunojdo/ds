@@ -3,7 +3,7 @@ package software_design.strategy;
 public class GratificacaoDesenvolvedor implements Gratificacao {
             @Override
             public double calcularGratificacao(Funcionario umFuncionario) {
-                  if (umFuncionario.nivel >= 2) {
+                  if (umFuncionario.getNivel >= 2) {
                       return umFuncionario.getSalarioBase() * 1.25;
                   }
                   return umFuncionario.getSalarioBase() * 1.15;
