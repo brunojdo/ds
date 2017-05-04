@@ -1,6 +1,6 @@
 package software_design.strategy;
 
-public class GratificacaoDBA implements Gratificacao {
+public class GratificacaoLider implements Gratificacao {
             @Override
             public double calcularGratificacao(Funcionario umFuncionario) {
                   if (umFuncionario.getNivel >= 2) {
